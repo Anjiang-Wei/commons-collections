@@ -31,6 +31,7 @@ jdk:
   - openjdk-ea
 
 script:
+  - mvn test -Dtest=TransformedMultiValuedMapTest -Dlicense.skip -Dcheckstyle.skip -Drat.skip -Denforcer.skip -Danimal.sniffer.skip -Dmaven.javadoc.skip -Dfindbugs.skip -Dwarbucks.skip -Dmodernizer.skip -Dimpsort.skip -Dmdep.analyze.skip -Dpgpverify.skip -Dxml.skip -Ddependency-check.skip=true -Dgpg.skip -fn
   - mvn -V
   # japicmp requires a package
   - mvn -V jar:jar japicmp:cmp -P japicmp
